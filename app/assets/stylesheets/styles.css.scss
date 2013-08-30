@@ -35,6 +35,10 @@ header{
   li{
     display: inline-box;
     float: left;
+    img{
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -45,8 +49,6 @@ header{
                    width .125s ease-in-out, 
                 box-shadow .5s ease-out, 
                    opacity 20s;
-    height: 100%;
-    width: 100%;
     position: relative;
     z-index: 100;
     opacity: .05;
