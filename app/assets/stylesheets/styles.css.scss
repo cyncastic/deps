@@ -27,39 +27,38 @@ header{
   }
 }
 
-.no-touch #myul{
+#myul{
   display: block;
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  transition: width .25s ease-in;
   li{
     display: inline-box;
     float: left;
-    img{
-      transition: height .125s ease-in-out, 
+  }
+}
+
+.no-touch #myul{
+  transition: width .25s ease-in;
+  li img{
+    transition:   height .125s ease-in-out, 
                    width .125s ease-in-out, 
-                    left .125s ease-in-out, 
-                     top .125s ease-in-out, 
                 box-shadow .5s ease-out, 
-                    opacity 20s;
-      height: 100%;
-      width: 100%;
-      position: relative;
-      z-index: 100;
-      opacity: .05;
-      &:hover{
-        // height: 101%;
-        // width: 101%;
-        // left: -.5%;
-        // top: -.5%;
-        box-shadow: 0 0  45px 0px rgba(0,0,0,.8);
-        opacity: 1;
-        transition: opacity .2s;
-      }
+                   opacity 20s;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    opacity: .05;
+    &:hover{
+      box-shadow: 0 0  45px 0px rgba(0,0,0,.8);
+      opacity: 1;
+      transition: opacity .2s;
     }
   }
 }
+
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
