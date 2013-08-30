@@ -1,0 +1,28 @@
+*, *:before, *:after { box-sizing: border-box; }
+body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
+
+header{
+  background: rgba(255,255,255,.9);
+  border-top: white 5px solid;
+  border-bottom: white 5px solid;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px black;
+  position: relative;
+  z-index: 99999;
+  width: 100%;
+  h1{
+    background: rgba(200,200,200,.5);
+    margin: 0 0 5px 0;
+    padding: 5px 0 5px 20px;
+    text-shadow: 0 0 1px black;
+  }
+  ul{
+    display: inline-block;
+    margin: 0 auto;
+    li{
+      display: inline-block;
+      margin: 0 10px 0 0;
+      padding: 0;
+    }
+  }
+}

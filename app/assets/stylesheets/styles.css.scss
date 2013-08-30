@@ -1,43 +1,19 @@
-*, *:before, *:after { box-sizing: border-box; }
-body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
-
-header{
-  background: rgba(255,255,255,.9);
-  border-top: white 5px solid;
-  border-bottom: white 5px solid;
-  margin-bottom: 20px;
-  box-shadow: 0 0 20px black;
-  position: relative;
-  z-index: 99999;
-  width: 100%;
-  h1{
-    background: rgba(200,200,200,.5);
-    margin: 0 0 5px 0;
-    padding: 5px 0 5px 20px;
-    text-shadow: 0 0 1px black;
-  }
-  ul{
-    display: inline-block;
-    margin: 0 auto;
-    li{
-      display: inline-block;
-      margin: 0 10px 0 0;
-      padding: 0;
-    }
-  }
-}
-
 #myul{
   display: block;
   list-style: none;
   margin: 0 auto;
   padding: 0;
   li{
-    display: inline-box;
+    display: block;
     float: left;
-    img{
-      height: 100%;
-      width: 100%;
+    overflow: hidden;
+    position: relative;
+    a{
+      display: block;
+      height: 100%; top:-50%;
+      width: 100%; left: -50%;
+      position: relative;
+      background: data-href;
     }
   }
 }
@@ -45,17 +21,19 @@ header{
 .no-touch #myul{
   transition: width .25s ease-in;
   li img{
-    transition:   height .125s ease-in-out, 
-                   width .125s ease-in-out, 
-                box-shadow .5s ease-out, 
-                   opacity 20s;
+    transition:    height .125s ease-in-out, 
+                    width .125s ease-in-out, 
+                box-shadow .75s ease-out, 
+                    opacity 12s ease-out;
     position: relative;
-    z-index: 100;
-    opacity: .05;
+    z-index: 1;
+    opacity: .075;
     &:hover{
       box-shadow: 0 0  45px 0px rgba(0,0,0,.8);
       opacity: 1;
-      transition: opacity .2s;
+      transition: opacity .125s, 
+                box-shadow .125s ease-out;
+      z-index: 100;
     }
   }
 }
@@ -64,12 +42,16 @@ header{
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-width : 320px) {
+and (min-width : 320px)
+and (max-width : 480px) {
+  header ul li{
+    display: block;
+  }
   #myul{
     width: 320px;
     li{
-        height: 160px;
-        width: 160px;
+        height: 320px;
+        width: 320px;
     }
   }
 }
@@ -79,8 +61,6 @@ and (min-width : 480px) {
   #myul{
     width: 480px;
     li{
-      display: inline-box;
-      float: left;
       &:nth-child(5n+1),
       &:nth-child(5n+2){
         height:240px;
@@ -102,8 +82,6 @@ and (min-width : 768px) {
   #myul{
     width: 720px;
     li{
-      display: inline-box;
-      float: left;
       &:nth-child(7n+1),
       &:nth-child(7n+2),
       &:nth-child(7n+3){
@@ -127,8 +105,6 @@ and (min-width : 1224px) {
   #myul{
     width: 960px;
     li{
-      display: inline-box;
-      float: left;
       &:nth-child(9n+1),
       &:nth-child(9n+2),
       &:nth-child(9n+3),
@@ -154,8 +130,6 @@ and (min-width : 1824px) {
   #myul{
     width: 1200px;
     li{
-      display: inline-box;
-      float: left;
       &:nth-child(11n+1),
       &:nth-child(11n+2),
       &:nth-child(11n+3),
