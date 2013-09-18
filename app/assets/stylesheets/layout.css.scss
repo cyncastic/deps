@@ -2,16 +2,15 @@
 body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
 
 header{
-  background: rgba(255,255,255,.9);
+  background: url('http://deps1.com/files/2013/02/cropped-IMG_0940.jpg');
   border-top: white 5px solid;
   border-bottom: white 5px solid;
   margin-bottom: 20px;
   box-shadow: 0 0 20px black;
-  position: relative;
-  z-index: 99999;
   width: 100%;
+  color: #fff;
   h1{
-    background: rgba(200,200,200,.5);
+    background: rgba(200,200,200,.35);
     margin: 0 0 5px 0;
     padding: 5px 0 5px 20px;
     text-shadow: 0 0 1px black;
@@ -23,6 +22,11 @@ header{
       display: inline-block;
       margin: 0 10px 0 0;
       padding: 0;
+      a{
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 0 0 5px black;
+      }
     }
   }
 }

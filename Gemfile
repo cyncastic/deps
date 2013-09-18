@@ -16,6 +16,10 @@ gem 'turbolinks'
 
 gem 'bcrypt-ruby'
 
+gem 'carrierwave'
+gem 'rmagick', '2.13.2'
+gem 'fog', '~> 1.10.1'
+
 group :development, :test do
   gem 'sqlite3'
 end

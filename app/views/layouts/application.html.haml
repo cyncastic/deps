@@ -5,14 +5,23 @@
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-  %link{ href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', rel: 'stylesheet', type: 'text/css' }
 
   %body
     %header
       %h1 Deps
-      %ul
-        %li= link_to 'home', root_path
-        %li= link_to 'contact', contact_path
-        %li= link_to 'test', test_path
+      %nav
+        %ul
+          %li= link_to 'home', root_path
+          = render '/categories/listcats'
+          %li= link_to 'contact', contact_path
+          %li= link_to 'test', test_path
+        %ul#admin
+          %li admin
+    #main
+      = yield
 
-    = yield
+    %nav.admin
+      %ul
+        %li= link_to 'Categories', categories_path
+        %li= link_to 'Artwork', artworks_path
