@@ -1,4 +1,4 @@
-#myul{
+#images{
   display: block;
   list-style: none;
   margin: 0 auto;
@@ -10,15 +10,12 @@
     position: relative;
     a{
       display: block;
-      height: 100%; top:-50%;
-      width: 100%; left: -50%;
       position: relative;
-      background: data-href;
     }
   }
 }
 
-.no-touch #myul{
+.no-touch #images{
   transition: width .25s ease-in;
   li img{
     transition:    height .125s ease-in-out, 
@@ -47,7 +44,7 @@ and (max-width : 480px) {
   header ul li{
     display: block;
   }
-  #myul{
+  #images{
     width: 320px;
     li{
         height: 320px;
@@ -58,7 +55,7 @@ and (max-width : 480px) {
 
 @media only screen 
 and (min-width : 480px) {
-  #myul{
+  #images{
     width: 480px;
     li{
       &:nth-child(5n+1),
@@ -79,7 +76,7 @@ and (min-width : 480px) {
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 768px) {
-  #myul{
+  #images{
     width: 720px;
     li{
       &:nth-child(7n+1),
@@ -102,7 +99,7 @@ and (min-width : 768px) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-  #myul{
+  #images{
     width: 960px;
     li{
       &:nth-child(9n+1),
@@ -127,7 +124,7 @@ and (min-width : 1224px) {
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-  #myul{
+  #images{
     width: 1200px;
     li{
       &:nth-child(11n+1),

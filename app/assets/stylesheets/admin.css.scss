@@ -21,6 +21,7 @@ nav.admin{
 }
 
 section.admin{
+  position: relative;
   width: 80%;
   margin: 0 auto;
   padding: .5em;
@@ -69,4 +70,19 @@ section.admin{
     }
   }
 }
+
+
+
+
+
+
+
+
+#crop-preview{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 3px solid rgba(0,0,0,.5);
+}
+
 

@@ -22,11 +22,14 @@ class ArtworksController < ApplicationController
   # POST /artworks
   def create
     @artwork = Artwork.new(artwork_params)
-
     if @artwork.save
-      redirect_to @artwork, notice: 'Artwork was successfully created.'
+      if params[:artwork][:image]
+        render :crop
+      else
+        redirect_to artworks_path, notice: 'Artwork was successfully created.'
+      end
     else
-      render action: 'new'
+      render :new
     end
   end
 
@@ -45,6 +48,13 @@ class ArtworksController < ApplicationController
     redirect_to artworks_url, notice: 'Artwork was successfully destroyed.'
   end
 
+  def sort
+    params[:artwork].each_with_index do |id, index|
+      Artwork.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_artwork
@@ -53,6 +63,6 @@ class ArtworksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def artwork_params
-      params.require(:artwork).permit(:title, :category, :position)
+      params.require(:artwork).permit(:title, :category_id, :position, :sold, :image, :crop_x, :crop_y, :crop_w, :crop_h)
     end
 end

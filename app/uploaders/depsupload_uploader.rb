@@ -15,7 +15,7 @@ class DepsuploadUploader < CarrierWave::Uploader::Base
 
   version :thumb do
     process :crop
-    process :resize_to_fill => [180, 180]
+    process :resize_to_fill => [320, 320]
   end
 
   version :icon do
