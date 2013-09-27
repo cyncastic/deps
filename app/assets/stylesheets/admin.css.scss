@@ -1,7 +1,10 @@
+$admin: #000;
+
 nav.admin{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background: black;
+  box-shadow: 0 0 50px 1px black;
   ul{
     margin: 0;
     padding: 0;
@@ -21,8 +24,9 @@ nav.admin{
 }
 
 section.admin{
+  font-family: helvetica;
   position: relative;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: .5em;
   background: #eee;
@@ -34,13 +38,62 @@ section.admin{
     color: #eee;
     box-shadow: 0 12px 10px -8px rgba(0,0,0,.5);
   }
+  table{
+    font-size: 1em;
+    width: 100%;
+    background-color: #ddd;
+    border: 4px lighten($admin, 30%) solid;
+    margin-bottom: 1.5em;
+    thead{
+      border-bottom: 2px darken($admin, 10) solid;
+    }
+    th, td{
+      padding: .125em .25em;
+    }
+    th{
+      background-color: #ccc;
+      color: #000;;
+      text-align: left;
+    }
+    tr{
+      transition: background-color 0.3s ease-out;
+      &:hover{
+        background-color: #eee;
+      }
+    }
+    td{
+      color: #000;
+      vertical-align: middle;
+      border-bottom: 1px darken($admin, 35) dashed;
+      a{
+        text-decoration: none;
+        margin: 0 .25em;
+        color: $admin;
+        transition: color 0.3s ease-out;
+        &:hover{
+          color: darken($admin, 20);
+        }
+      }
+      img{
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        border: 4px #eee solid;
+      }
+      &.actions{
+        text-align: right;
+      }
+    }
+    .sold{
+      color: red;
+      position: absolute;
+      margin-left: -1em;
+    }
+  }
   .field_with_errors {
     padding: 2px;
     background-color: red;
     display: table;
   }
 }
-
 
 
 
@@ -71,10 +124,9 @@ section.admin{
   }
 }
 
-
-
-
-
+#notice {
+  color: green;
+}
 
 
 

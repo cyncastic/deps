@@ -21,14 +21,14 @@
     transition:    height .125s ease-in-out, 
                     width .125s ease-in-out, 
                 box-shadow .75s ease-out, 
-                    opacity 12s ease-out;
+                    opacity 2s ease-out;
     position: relative;
     z-index: 1;
     opacity: .075;
     &:hover{
       box-shadow: 0 0  45px 0px rgba(0,0,0,.8);
       opacity: 1;
-      transition: opacity .125s, 
+      transition: opacity .5s, 
                 box-shadow .125s ease-out;
       z-index: 100;
     }

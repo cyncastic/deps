@@ -7,17 +7,17 @@
         %th
         %th Title
         %th Category
-        %th Sold
         %th
 
-    %tbody
+    %tbody.sorts{ data: { update_url: sort_artworks_url } }
       - @artworks.each do |artwork|
         %tr
           %td= image_tag artwork.image_url(:icon).to_s
-          %td= artwork.title
-          %td= artwork.category.name
-          %td= artwork.sold
           %td
+            = raw "<span class='sold'>&bull;</span>" if artwork.sold
+            = link_to artwork.title, artwork
+          %td= artwork.category.name
+          %td.actions
             = link_to 'Show', artwork
             = link_to 'Edit', edit_artwork_path(artwork)
             = link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }
