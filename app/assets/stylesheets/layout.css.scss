@@ -1,6 +1,6 @@
 *, *:before, *:after { box-sizing: border-box; }
 
-body{ background: url('/assets/wood_bg.jpg'); }
+body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
 
 #main-header{
   padding: 1em 2em 0em;
@@ -11,7 +11,7 @@ body{ background: url('/assets/wood_bg.jpg'); }
     margin: 0;
     padding: 0;
     height: 72px;
-    background: url('/assets/header.png') .25em 0;
+    background: url('https://s3.amazonaws.com/deps1/static/header.png') .25em 0;
     box-shadow: 0 0 2px rgba(0,0,0,.5);
     text-indent: -9999px;
     animation: 3s slideBg infinite linear;
