@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.ui.sortable
 //= require turbolinks
+//= require jquery.pin.js
 //= require_tree .
