@@ -21,9 +21,13 @@
     }
     .post{
       padding: .25em;
-      font-size: 1.25em;
+      font-size: 1.125em;
       background: rgba(255,255,255,.25);
     }
-    footer{}
+    footer{
+      ul{
+        background: red;
+      }
+    }
   }
 }
