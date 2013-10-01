@@ -35,6 +35,9 @@
   }
 }
 
+#artwork-container{
+  margin: 0 auto;
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -43,6 +46,12 @@ and (min-width : 320px)
 and (max-width : 480px) {
   header ul li{
     display: block;
+  }
+  #artwork-container{
+    width: 320px;
+    img{
+      max-width: 320px;
+    }
   }
   #images{
     width: 320px;
@@ -55,6 +64,12 @@ and (max-width : 480px) {
 
 @media only screen 
 and (min-width : 480px) {
+  #artwork-container{
+    width: 480px;
+    img{
+      max-width: 480px;
+    }
+  }
   #images{
     width: 480px;
     li{
@@ -76,6 +91,12 @@ and (min-width : 480px) {
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 768px) {
+  #artwork-container{
+    width: 720px;
+    img{
+      max-width: 720px;
+    }
+  }
   #images{
     width: 720px;
     li{
@@ -99,6 +120,12 @@ and (min-width : 768px) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
+  #artwork-container{
+    width: 960px;
+    img{
+      max-width: 960px;
+    }
+  }
   #images{
     width: 960px;
     li{
@@ -124,6 +151,9 @@ and (min-width : 1224px) {
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
+  #artwork-container{
+    width: 1200px;
+  }
   #images{
     width: 1200px;
     li{
