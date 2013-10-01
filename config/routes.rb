@@ -1,5 +1,7 @@
 Deps::Application.routes.draw do
 
+  resources :blogs
+
   root 'static#home'
 
   get 'contact' => 'static#contact'

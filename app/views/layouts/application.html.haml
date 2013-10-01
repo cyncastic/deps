@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Deps
+    %title DEPS
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -12,13 +12,14 @@
       %h1 Deps
       %nav
         %ul
-          %li= link_to 'home', root_path
+          %li= link_to 'home', blogs_path
           = render '/categories/listcats'
           %li= link_to 'contact', contact_path
-    #main
+    #main-content
       = yield
 
     %nav.admin
       %ul
+        %li= link_to 'New Blog', new_blog_path
         %li= link_to 'Categories', categories_path
         %li= link_to 'Artwork', artworks_path
