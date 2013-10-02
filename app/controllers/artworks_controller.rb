@@ -1,4 +1,5 @@
 class ArtworksController < ApplicationController
+  skip_before_filter :authorize, only: [:show]
   before_action :set_artwork, only: [:show, :edit, :update, :destroy]
 
   # GET /artworks
