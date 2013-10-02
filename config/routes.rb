@@ -1,13 +1,13 @@
 Deps::Application.routes.draw do
 
-  root 'static#home'
+  root 'blogs#index'
 
-  resources :blogs
-  resources :users
-  resources :sessions
+  resources :blogs, :users
 
   get 'contact' => 'static#contact'
   get 'test' => 'static#test'
+  get 'admin' => 'admin#index'
+
   
   resources :artworks do
     collection{ post :sort }
@@ -17,8 +17,10 @@ Deps::Application.routes.draw do
     collection{ post :sort }
   end
 
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#new", :as => "log_in"
-  get "sign_up" => "users#new", :as => "sign_up"
-    
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
 end
