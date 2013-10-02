@@ -1,5 +1,7 @@
 Deps::Application.routes.draw do
 
+  resources :media
+
   root 'blogs#index'
 
   resources :blogs, :users
