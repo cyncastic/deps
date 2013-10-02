@@ -14,7 +14,7 @@ gem 'jquery-ui-rails'
 
 gem 'turbolinks'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'

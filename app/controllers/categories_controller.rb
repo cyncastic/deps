@@ -1,27 +1,21 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
-  # GET /categories
   def index
     @categories = Category.all
   end
 
-  # GET /categories/1
   def show
-    @category = Category.find(params[:id])
     @artworks = @category.artworks.order("position")
   end
 
-  # GET /categories/new
   def new
     @category = Category.new
   end
 
-  # GET /categories/1/edit
   def edit
   end
 
-  # POST /categories
   def create
     @category = Category.new(category_params)
 
