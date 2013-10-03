@@ -9,7 +9,7 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
   box-shadow: 0 0 20px rgba(0,0,0,.75);
   h1{
     position: relative;
-    z-index: 100;
+    z-index: 999999;
     margin: 0 2em 0;
     padding: 0;
     height: 73px;
@@ -21,6 +21,7 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
   nav{
     padding: .25em .5em .25em;
     background: #fff;
+    z-index: 999999;
     ul{
       margin: 0;
       padding: 0 0 0 4.75em;
