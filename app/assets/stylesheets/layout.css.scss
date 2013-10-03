@@ -5,20 +5,22 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
 #main-header{
   padding-top: .5em;
   margin-bottom: 1em;
-  background: white;
+  background: #fff;
   box-shadow: 0 0 20px rgba(0,0,0,.75);
   h1{
+    position: relative;
+    z-index: 100;
     margin: 0 2em 0;
     padding: 0;
     height: 73px;
     background: url('https://s3.amazonaws.com/deps1/static/banner.jpg') .25em 0;
-    box-shadow: 0 0 2px rgba(0,0,0,.5);
     text-indent: -9999px;
-    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,.75);
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,.75),
+                      0px 0px  2px 0px rgba(0,0,0,.5);
   }
   nav{
     padding: .25em .5em .25em;
-    background: #fefefe;
+    background: #fff;
     ul{
       margin: 0;
       padding: 0 0 0 4.75em;
@@ -38,6 +40,7 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
       &:before{
         content: "DEPS ";
         font-size: 1.5em;
+        font-weight: 700;
         color: #333;
         margin-right: .5em;
       }

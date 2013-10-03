@@ -51,7 +51,7 @@ class ArtworksController < ApplicationController
 
   def sort
     params[:artwork].each_with_index do |id, index|
-      Artwork.update_all({position: index+1}, {id: id})
+      Artwork.update_all({ position: index+1 }, { id: id })
     end
     render nothing: true
   end

@@ -3,9 +3,8 @@ $admin: #000;
 nav.admin{
   position: fixed;
   z-index: 99999;
-  bottom: 0;
-  background: black;
-  box-shadow: 0 0 50px 1px black;
+  top: 120px;
+  background: #ddd;
   ul{
     margin: 0;
     padding: 0;
@@ -13,9 +12,10 @@ nav.admin{
     li{
       a{
         display: block;
-        padding: 1em;
+        padding: .5em;
         color: #2c86ff;
         transition: all .2s ease-in-out;
+        text-decoration: none;
         &:hover{
           background: #fff;
         }
@@ -25,9 +25,7 @@ nav.admin{
 }
 
 section.admin{
-  font-family: helvetica;
   position: relative;
-  width: 90%;
   margin: 0 auto;
   padding: .5em;
   background: #eee;
