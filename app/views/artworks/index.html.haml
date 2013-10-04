@@ -10,6 +10,9 @@
         %th
         %th Title
         %th Category
+        %th Year
+        %th Medium
+        %th Dimensions
         %th
     %tbody.sorts{ data: { update_url: sort_artworks_url } }
       - @artworks.each do |artwork|
@@ -19,6 +22,9 @@
             = raw "<span class='sold'>&bull;</span>" if artwork.sold
             = link_to artwork.title, artwork
           %td= artwork.category.name
+          %td= artwork.year
+          %td= artwork.medium
+          %td= artwork.width.to_s + " x " +artwork.length.to_s
           %td.actions
             = link_to 'Show', artwork
             = link_to 'Edit', edit_artwork_path(artwork)
