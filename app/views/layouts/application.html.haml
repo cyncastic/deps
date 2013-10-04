@@ -20,10 +20,13 @@
 
     %nav.admin
       %ul
-        %li= link_to 'New Blog', new_blog_path
-        %li= link_to 'Categories', categories_path
-        %li= link_to 'Artwork', artworks_path
-        %li= link_to 'Logout', logout_path, method: :delete 
+        -if not session[:user_id]
+          %li= link_to 'Login', login_path
+        - if session[:user_id]
+          %li= link_to 'New Blog', new_blog_path
+          %li= link_to 'Categories', categories_path
+          %li= link_to 'Artwork', artworks_path
+          %li= link_to 'Logout', logout_path, method: :delete 
 
   :javascript
     $('nav.pinned').pin({  minWidth: 480 })
