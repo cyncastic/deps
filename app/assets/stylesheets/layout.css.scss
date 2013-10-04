@@ -4,12 +4,12 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
 
 #main-header{
   padding-top: .5em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   background: #fff;
   h1{
     position: relative;
     z-index: 999999;
-    margin: 0 2em 0;
+    margin: 0;
     padding: 0;
     height: 73px;
     background: url('https://s3.amazonaws.com/deps1/static/banner.jpg') .25em 0;
