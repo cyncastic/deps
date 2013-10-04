@@ -27,7 +27,7 @@ class ArtworksController < ApplicationController
       if params[:artwork][:image]
         render :crop
       else
-        redirect_to artworks_path, notice: 'Artwork was successfully created.'
+        redirect_to artworks_path, notice: 'Artwork successfully created.'
       end
     else
       render :new
@@ -37,7 +37,7 @@ class ArtworksController < ApplicationController
   # PATCH/PUT /artworks/1
   def update
     if @artwork.update(artwork_params)
-      redirect_to @artwork, notice: 'Artwork was successfully updated.'
+      redirect_to @artwork, notice: 'Artwork successfully updated.'
     else
       render action: 'edit'
     end
@@ -46,7 +46,7 @@ class ArtworksController < ApplicationController
   # DELETE /artworks/1
   def destroy
     @artwork.destroy
-    redirect_to artworks_url, notice: 'Artwork was successfully destroyed.'
+    redirect_to artworks_url, notice: 'Artwork successfully destroyed.'
   end
 
   def sort

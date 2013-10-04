@@ -3,7 +3,7 @@
 
   .crop-holder
     = image_tag @artwork.image_url(:large), id: "cropbox"
-    #crop-preview{ :style => "width:180px; height:180px; overflow:hidden" }
+    #crop-preview
       = image_tag @artwork.image_url(:large), :id => "preview"
 
   = form_for @artwork do |f|
@@ -11,4 +11,4 @@
       = f.hidden_field "crop_#{attribute}"
 
     .actions
-      = f.submit "Crop"
+      = f.submit "Crop", class: 'btn'

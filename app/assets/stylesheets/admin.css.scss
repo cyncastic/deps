@@ -27,8 +27,9 @@ nav.admin{
 
 section.admin{
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   padding: .5em;
+  border-radius: 10px;
   background: #eee;
   h1{
     margin: -.5em;
@@ -80,6 +81,13 @@ section.admin{
       }
       &.actions{
         text-align: right;
+        a{
+          font-size: .8em;
+          transition: color .25s ease-in-out;
+          &:hover{
+            color: red;
+          }
+        }
       }
     }
     .sold{
@@ -122,16 +130,22 @@ section.admin{
   }
 }
 
+
 #notice {
   color: green;
   background: white;
   padding: .5em;
   border: 1px black solid;
 }
-
+#crop-holder{
+  display: block;
+}
 #crop-preview{
   position: absolute;
   top: 0;
   right: 0;
+  width:180px; 
+  height:180px;
+  overflow:hidden;
   border: 3px solid rgba(0,0,0,.5);
 }

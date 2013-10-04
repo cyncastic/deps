@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   
   skip_before_filter :authorize, only: [:show]
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: [:show, :edit, :update, :destroy, :sort]
 
   def index
     @categories = Category.all
@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to categories_url, notice: 'Category was successfully created.'
+      redirect_to categories_url, notice: 'Category successfully created.'
     else
       render action: 'new'
     end
@@ -31,7 +31,7 @@ class CategoriesController < ApplicationController
   # PATCH/PUT /categories/1
   def update
     if @category.update(category_params)
-      redirect_to @category, notice: 'Category was successfully updated.'
+      redirect_to @category, notice: 'Category successfully updated.'
     else
       render action: 'edit'
     end
@@ -40,7 +40,14 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   def destroy
     @category.destroy
-    redirect_to categories_url, notice: 'Category was successfully destroyed.'
+    redirect_to categories_url, notice: 'Category successfully destroyed.'
+  end
+
+  def sort
+    params[:category].each_with_index do |id, index|
+      Category.update_all({ position: index+1 }, { id: id })
+    end
+    render nothing: true
   end
 
   private
