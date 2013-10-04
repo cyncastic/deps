@@ -1,6 +1,7 @@
 .posts{
   article{
     padding-bottom: 1em;
+    position: relative;
     header{
       h1{
         a{
@@ -14,7 +15,12 @@
         }
       }
     }
-    .posted{}
+    .posted{
+      position: absolute;
+      right: 0;
+      top: .5em;
+      color: white;
+    }
     img{
       margin: .25em 0;
       box-shadow: 0 0 10px rgba(0,0,0,.333);
