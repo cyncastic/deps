@@ -16,7 +16,7 @@
 /* Selection Border */
 .jcrop-vline,
 .jcrop-hline {
-  background: #ffffff url("/assets/Jcrop.gif");
+  background: #ffffff url("https://s3.amazonaws.com/deps1/static/Jcrop.gif");
   font-size: 0;
   position: absolute;
 }
@@ -38,12 +38,6 @@
 .jcrop-tracker {
   height: 100%;
   width: 100%;
-  /* "turn off" link highlight */
-  -webkit-tap-highlight-color: transparent;
-  /* disable callout, image save panel */
-  -webkit-touch-callout: none;
-  /* disable cut copy paste */
-  -webkit-user-select: none;
 }
 /* Selection Handles */
 .jcrop-handle {
