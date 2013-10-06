@@ -1,22 +1,17 @@
 Deps::Application.routes.draw do
 
-  resources :media
-
   root 'blogs#index'
-
-  resources :blogs, :users
 
   get 'contact' => 'static#contact'
   get 'test' => 'static#test'
   get 'admin' => 'admin#index'
 
-  
-  resources :artworks do
-    collection{ post :sort }
-  end
+  resources :blogs, :users, :media
 
-  resources :categories do
-    collection{ post :sort }
+  resources :artworks,:categories do
+    collection do
+      post :sort
+    end
   end
 
   controller :sessions do
