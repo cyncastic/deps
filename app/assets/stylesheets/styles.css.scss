@@ -20,6 +20,19 @@
   }
 }
 
+#lbCaption .sold{
+  &:before{
+    content: '• ';
+    color: red;
+    display: inline-block;
+    position: relative;
+    right: .5em;
+  }
+}
+
+
+
+
 .no-touch #images{
   transition: width .25s ease-in;
   li img{
