@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   def index
-    @blogs = Blog.all
+    @blogs = Blog.descposted
   end
 
   # GET /blogs/1

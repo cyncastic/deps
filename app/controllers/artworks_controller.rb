@@ -4,7 +4,11 @@ class ArtworksController < ApplicationController
 
   # GET /artworks
   def index
-    @artworks = Artwork.all
+    if !params[:category_id]
+      @artworks = Artwork.all
+    else
+      @artworks = Category.find(params[:category_id]).artworks.order("position")
+    end
   end
 
   # GET /artworks/1

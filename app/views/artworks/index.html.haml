@@ -3,6 +3,11 @@
  
   - if notice
     %p#notice= notice
+    
+  %ul#categoryselectlist
+    - @categories.each do |category|
+      %li
+        %a{ href: artworks_path(category_id: category.id) }=category.name
   
   %table
     %thead
