@@ -7,7 +7,7 @@ $ ->
     closeKeys: [27, 70],
     nextKeys: [39, 83]
   , (el)->
-      if typeof $(el).attr('data-sold') isnt 'undefined'
+      if $(el).attr('data-sold') == 'true'
         myTitle = "<span class='sold'>" + $(el).data('title') + "</span>"
       else
         myTitle = $(el).data('title')
