@@ -31,8 +31,25 @@
       background: rgba(255,255,255,.25);
     }
     footer{
+      .fb-like{
+        margin: .25em 0;
+      }
       ul{
-        background: red;
+        background: rgba(255,0,0,.25);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+          margin: 0; 
+          padding: 0 .25em;
+          display: inline-block;
+          a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+            }
+          }
+        }
       }
     }
   }
