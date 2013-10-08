@@ -76,10 +76,15 @@ and (max-width : 480px) {
         width: 320px;
     }
   }
+  th.year, th.medium, th.dimensions,
+  td.year, td.medium, td.dimensions{
+    display: none;
+  }
 }
 
 @media only screen 
-and (min-width : 480px) {
+and (min-width : 480px)
+and (max-width : 767px) {
   #main-content{
     width: 480px;
     img{
@@ -102,11 +107,16 @@ and (min-width : 480px) {
       }
     }
   }
+  th.year, th.medium, th.dimensions,
+  td.year, td.medium, td.dimensions{
+    display: none;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
-and (min-width : 768px) {
+and (min-width : 768px)
+and (max-width : 1224px){
   #main-content{
     width: 720px;
     img{
@@ -130,6 +140,10 @@ and (min-width : 768px) {
         width: 180px;
       }
     }
+  }
+  th.year, th.dimensions,
+  td.year, td.dimensions{
+    display: none;
   }
 }
 
