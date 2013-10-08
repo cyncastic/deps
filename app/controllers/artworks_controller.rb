@@ -5,7 +5,7 @@ class ArtworksController < ApplicationController
   # GET /artworks
   def index
     if !params[:category_id]
-      @artworks = Artwork.all
+      @artworks = Artwork.order("position")
     else
       @artworks = Category.find(params[:category_id]).artworks.order("position")
     end
@@ -56,7 +56,7 @@ class ArtworksController < ApplicationController
 
   def sort
     params[:artwork].each_with_index do |id, index|
-      Artwork.update_all({ position: index+1 }, { id: id })
+      Artwork.where(id: id).update_all(position: index+1)
     end
     render nothing: true
   end

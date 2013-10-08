@@ -10,5 +10,5 @@ $ ->
       axis: 'y'
       update: ->
         $.post($(this).data('update-url'), $(this).sortable('serialize'))
-        console.logd(this)
+        console.log($(this).sortable('serialize'))
       helper: fixHelper

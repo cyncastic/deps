@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.order("position")
   end
 
   def show
@@ -45,7 +45,7 @@ class CategoriesController < ApplicationController
 
   def sort
     params[:category].each_with_index do |id, index|
-      Category.update_all({ position: index+1 }, { id: id })
+      Category.where(id: id).update_all(position: index+1)
     end
     render nothing: true
   end
