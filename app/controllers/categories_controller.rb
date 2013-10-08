@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   
   skip_before_filter :authorize, only: [:show]
-  before_action :set_category, only: [:show, :edit, :update, :destroy, :sort]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
     @categories = Category.all

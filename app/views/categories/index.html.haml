@@ -10,7 +10,7 @@
         %th Name
         %th Hidden
         %th
-    %tbody.sorts
+    %tbody.sorts{ data: { update_url: sort_categories_url } }
       - @categories.each do |category|
         %tr
           %td= category.name

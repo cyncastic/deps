@@ -9,6 +9,7 @@ class ArtworksController < ApplicationController
     else
       @artworks = Category.find(params[:category_id]).artworks.order("position")
     end
+    @categories = Category.order("position")
   end
 
   # GET /artworks/1

@@ -19,7 +19,7 @@
         %th Medium
         %th Dimensions
         %th
-    %tbody.sorts{ data: { update_url: sort_artworks_url } }
+    %tbody.sorts{ data: { update_url: 'sort_categories_url' } }
       - @artworks.each do |artwork|
         %tr
           %td= image_tag artwork.image_url(:icon).to_s

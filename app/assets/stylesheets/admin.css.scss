@@ -132,6 +132,22 @@ section.admin{
   }
 }
 
+ul#categoryselectlist{
+  text-transform: lowercase;
+  margin: 0 0 1.5em 0;
+  padding:0;
+  list-style: none;
+  li{
+    display: inline-block;
+    margin-left: .5em;
+    a{
+      text-decoration: none;
+    }
+  }
+  .selected{
+    font-weight: bold;
+  }
+}
 
 #notice {
   color: green;

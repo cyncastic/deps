@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   def index
-    @blogs = Blog.descposted
+    @blogs = Blog.order("blogs.posted DESC")
   end
 
   # GET /blogs/1
