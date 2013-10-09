@@ -6,4 +6,6 @@ class Blog < ActiveRecord::Base
   validates :title, :post, :image, presence: true
 
   mount_uploader :image, BlogUploader
+
+  self.per_page = 5
 end

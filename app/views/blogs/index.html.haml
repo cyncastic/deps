@@ -4,6 +4,8 @@
 .posts
   =render partial: "blogs/blog", :collection => @blogs
 
+= link_to 'load more', blogs_path(page: @blogs.next_page), class: 'load-more-posts', remote: true
+
 #fb-root
 :javascript
   (function(d, s, id) {
