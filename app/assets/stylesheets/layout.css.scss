@@ -15,6 +15,8 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
     text-indent: -9999px;
     box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,.75),
                       0px 0px  2px 0px rgba(0,0,0,.5);
+    animation: headerscroll 120s linear infinite;
+
   }
   nav{
     padding: .25em .5em .25em;
@@ -36,7 +38,6 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
             color: #000;
           }
           &.current{
-            color: #000;
             font-weight: 400;
           }
         }
@@ -52,4 +53,25 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
   }
 }
 
+
+@keyframes headerscroll {
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 2195px 0;
+  }
+}
+
+@keyframes pulsatelink {
+  0%{
+    color: #999;
+  }
+  50%{
+    color: #000;
+  }
+  100%{
+    color: #999;
+  }
+}
 
