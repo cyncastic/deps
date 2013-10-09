@@ -54,3 +54,16 @@
     }
   }
 }
+
+
+.load-more-posts{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #eee;
+  text-shadow: 0 0 6px rgba(0,0,0,.5);
+  font-size: 1.5em;
+  &:hover{
+    color: white;
+  }
+}
