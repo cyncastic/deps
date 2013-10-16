@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002174919) do
+ActiveRecord::Schema.define(version: 20131016014829) do
 
   create_table "artworks", force: true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20131002174919) do
     t.integer  "length"
     t.integer  "width"
     t.integer  "year"
+    t.integer  "price"
   end
 
   create_table "blogs", force: true do |t|

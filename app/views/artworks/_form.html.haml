@@ -12,6 +12,10 @@
     = f.collection_select(:category_id, Category.all, :id, :name, { selected: params[:category_id] })
 
   .field
+    = f.label :price
+    = f.number_field :price
+
+  .field
     = f.label :sold
     = f.check_box :sold
 

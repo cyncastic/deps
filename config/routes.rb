@@ -5,6 +5,7 @@ Deps::Application.routes.draw do
   get 'contact' => 'static#contact'
   get 'test' => 'static#test'
   get 'admin' => 'admin#index'
+  get 'pricelist' => 'pricelist#index'
 
   resources :blogs, :users, :media
 
