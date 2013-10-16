@@ -25,7 +25,6 @@
           %td
             = raw "<span class='sold'>&bull;</span>" if artwork.sold
             = link_to artwork.title, artwork
-          %td= artwork.category.name
           %td.year= artwork.year
           %td.medium= artwork.medium
           %td.dimensions= artwork.width.to_s + " x " +artwork.length.to_s
