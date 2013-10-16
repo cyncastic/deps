@@ -1,4 +1,4 @@
-$('.posts').append('<div id="page_#{ @blogs.current_page }" #{ j render(@blogs) } </div>');
+$('.posts').append('<div id="page_#{ @blogs.current_page }"> #{ j render(@blogs) } </div>');
 - if @blogs.next_page
   $('.pagination').replaceWith('#{ j will_paginate(@blogs) }');
 - else
