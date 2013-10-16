@@ -7,14 +7,13 @@
   %ul#categoryselectlist
     - @categories.each do |category|
       %li
-        %a{ href: artworks_path(category_id: category.id) }=category.name
+        %a{ href: artworks_path(category_id: category.id), class: cp(artworks_path(category_id: category.id)) }=category.name
   
   %table
     %thead
       %tr
         %th
         %th Title
-        %th Category
         %th.year Year
         %th.medium Medium
         %th.dimensions Dimensions

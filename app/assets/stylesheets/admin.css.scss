@@ -141,11 +141,17 @@ ul#categoryselectlist{
     display: inline-block;
     margin-left: .5em;
     a{
+      color: #444;
       text-decoration: none;
+      font-weight: 400;
+      &:hover{
+        color: #111;
+      }
     }
   }
-  .selected{
-    font-weight: bold;
+  .current{
+    color: #000;
+      font-weight: 600;
   }
 }
 
