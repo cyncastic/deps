@@ -18,7 +18,7 @@ body{ background: url('https://s3.amazonaws.com/deps1/static/wood_bg.jpg'); }
     animation: headerscroll 120s linear infinite;
 
   }
-  nav{
+  nav#main-navigation{
     padding: .25em .5em .25em;
     background: #fff;
     z-index: 998;
