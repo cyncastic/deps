@@ -69,6 +69,7 @@ and (max-width : 480px) {
       max-width: 320px;
     }
   }
+  #contact-link{ font-size: 28px; }
   #images{
     width: 320px;
     li{
@@ -91,6 +92,7 @@ and (max-width : 767px) {
       max-width: 480px;
     }
   }
+  #contact-link{ font-size: 38px; }
   #images{
     width: 480px;
     li{
@@ -123,6 +125,7 @@ and (max-width : 1224px){
       max-width: 720px;
     }
   }
+  #contact-link{ font-size: 68px; }
   #images{
     width: 720px;
     li{
@@ -156,6 +159,7 @@ and (min-width : 1224px) {
       max-width: 960px;
     }
   }
+  #contact-link{ font-size: 98px; }
   #images{
     width: 960px;
     li{
@@ -184,6 +188,7 @@ and (min-width : 1824px) {
   #main-content{
     width: 1200px;
   }
+  #contact-link{ font-size: 98px; }
   #images{
     width: 1200px;
     li{
